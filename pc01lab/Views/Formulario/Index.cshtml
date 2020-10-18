@@ -1,0 +1,69 @@
+@model pc01lab.Models.Formulario
+
+@{
+    ViewData["Title"] = "Formulario";
+}
+<div class="container">
+
+<div class="row">
+    <div class="col-md-4">          
+        <h1 class="">Formulario</h1>
+        
+            <h5 class="badge badge-secondary">Hecho por Elizabeth Quispe Esteban</h5>
+        
+        <form asp-controller="Formulario" asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>    
+
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div> 
+            <div class="form-group">
+                <label asp-for="district" class="control-label"></label>
+                <input asp-for="district" class="form-control" />
+                <span asp-validation-for="district" class="text-danger"></span>
+            </div>                  
+                            
+            <div class="form-group">
+                <div>
+                    <label asp-for="bank" class="control-label"></label>
+                </div>
+                <div>
+                <select asp-for="bank">
+                <option value="bcp">BCP</option>
+                <option value="bbva">BBVA</option>
+                <option value="bn">BN</option>
+                <option value="bc">Banco de China</option>
+                <span asp-validation-for="district" class="text-danger"></span>
+                </select>
+                </div>              
+            </div> 
+            <div class="form-group">
+                <label asp-for="old" class="control-label"></label>
+                <input asp-for="old" class="form-control" />
+                <span asp-validation-for="old" class="text-danger"></span>
+            </div>   
+            <div class="form-group">
+                <label asp-for="sex" class="control-label"></label>
+                <label><input type="radio" name="sex" value="F"> Femenino</label>
+                <label><input type="radio" name="sex" value="M"> Masculino</label>
+            </div>               
+
+            <div class="form-group">
+                 <button type="submit" class="btn btn-primary">Registrar</button> 
+            </div>                
+
+        </form>
+            
+        <td>@Html.DisplayTextFor(model => model.Response)</td>    
+    
+    </div>
+</div>
+</div>
+
