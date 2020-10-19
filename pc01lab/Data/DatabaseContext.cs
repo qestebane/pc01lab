@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +12,6 @@ namespace pc01lab.Data
         {
         }
 
-         public DbSet<pc01lab.Models.Contacto> Contactos { get; set; }
+         public DbSet<pc01lab.Models.Formulario> Formularios { get; set; }
     }
-}*/
+}
